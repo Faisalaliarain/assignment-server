@@ -1,0 +1,27 @@
+{
+  "name": "socket-io-test",
+  "version": "1.0.0",
+  "description": "This is an attempt to assignment",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node ./node_modules/.bin/pm2 start ./server/index.js -i max -o \"/dev/null\" -e \"/dev/null\"",
+    "dev": "nodemon ./server/index.js --max-http-header-size=16384 | \"./node_modules/.bin/bunyan\""
+  },
+  "author": "Faisal Ali",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-validation": "^3.0.8",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.4.1",
+    "mongoose": "^5.6.6",
+    "mongoose-timestamp": "^0.6.0",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "bunyan": "^1.8.0",
+    "nodemon": "^2.0.0"
+  }
+}
